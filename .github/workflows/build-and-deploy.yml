@@ -30,7 +30,7 @@ jobs:
         run: cd src/frontend && npm run build
 
       - name: Build JAR
-        run: ./mvnw clean package
+        run: chmod +x mvnw && ./mvnw clean package
 
       - name: Copy JAR to server
         uses: appleboy/scp-action@v0.1.4
