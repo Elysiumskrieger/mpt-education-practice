@@ -53,5 +53,6 @@ jobs:
           script_stop: true
           script: |
             cd ${{secrets.DEPLOY_PATH}}
+            cd target
             tmux kill-session -t mpt-practice || true
             tmux new-session -d -s mpt-practice 'java -jar practice-0.0.1-SNAPSHOT.jar'
