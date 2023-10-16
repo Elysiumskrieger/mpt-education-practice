@@ -32,7 +32,7 @@ jobs:
         run: ./mvnw clean package
 
       - name: Copy JAR to server
-        uses: appleboy/scp-action@v2
+        uses: appleboy/scp-action@v1
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
