@@ -10,7 +10,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Setup Node.js
         uses: actions/setup-node@v2
@@ -32,7 +32,7 @@ jobs:
         run: ./mvnw clean package
 
       - name: Copy JAR to server
-        uses: appleboy/scp-action@v1
+        uses: appleboy/scp-action@v0.1.4
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
