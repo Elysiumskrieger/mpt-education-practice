@@ -42,7 +42,6 @@ jobs:
           source: "target/practice-0.0.1-SNAPSHOT.jar"
           target: ${{secrets.DEPLOY_PATH}}
 
-
       - name: Deploy on server
         uses: appleboy/ssh-action@master
         with:
